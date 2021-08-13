@@ -10,18 +10,36 @@ ASSIGNMENT RULES
 Write a function "area" which receives 2 parameters (l1,l2) and calculates the area of the associated rectangle.
 */
 const rectangleArea = function (l1, l2) {
-    console.log(`the area of your rectangle is ${l1*l2}cm`)
+    console.log(`The area of your rectangle is ${l1*l2}cm`)
 }
 rectangleArea(8, 9)
 
 /* EXERCISE 2
 Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
+const crazySum = function(int1, int2){ 
+    if (int1===int2) {
+        return (int1+int2)*3
+    } else {
+        return int1+int2
+    } 
+}
+crazySum(2, 4)
 
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
 It should return triple their absolute difference if the given number is greater than 19.
 */
+let myNum = 19
+const crazyDiff = function(givenNum) {
+    if (givenNum>myNum) {
+        return Math.abs((givenNum-myNum)*3);
+    } else {
+        return Math.abs(givenNum-myNum)
+    }
+}
+
+crazyDiff(22)
 
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
