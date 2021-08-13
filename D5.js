@@ -72,8 +72,18 @@ Write a function "check3and7" which accepts a positive number and check if it is
 HINT: Module Operator
 */
 
-const check3and7 = function ()
+const check3and7 = function (myNum) {
+    if (myNum > 0){ if (myNum%3===0 || myNum%7===0) {
+        console.log(`affermative`)
+    } else {
+        console.log(`negative`)
+    }
 
+    } else {
+        console.log(`give me a positive number`)
+    }
+}
+ check3and7(18)
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
