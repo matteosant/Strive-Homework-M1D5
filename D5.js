@@ -45,7 +45,12 @@ crazyDiff(22)
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
 
-/* WRITE YOUR CODE HERE */
+const boundary = function(n) {
+    if (n>=20 && n<=100 || n === 400) {
+return true
+    }
+}
+boundary(22)
 
 /* EXERCISE 5
 Write a function "strivify" which accepts a string.
