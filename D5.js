@@ -61,11 +61,11 @@ function strivify(givenString){
     if (givenString === `Strive${givenString.replace("Strive","")}`) {
       return givenString
     } else {
-   return `Strive` + givenString
+   return `Strive${givenString}`
   }
   }
   
-  strivify(`Strivschool`)
+  strivify(`whatever`)
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
@@ -100,13 +100,13 @@ reverseString('halleluja');
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
-/* WRITE YOUR CODE HERE */
+function upperFirst()
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
-/* WRITE YOUR CODE HERE */
+function cutString()
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
