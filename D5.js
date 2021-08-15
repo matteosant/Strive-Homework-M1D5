@@ -143,7 +143,19 @@ function cutString (myCutString) {
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
+function giveMeRandom (n) {
+    let nArray = []
+    function random(number) {
+        return Math.floor(Math.random() * number);
+      } 
+      for (let i = 0; i < n; i++){
+    nArray.push(random(10))
+      }
+      
+    return nArray
+}
 
+giveMeRandom(10)
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
