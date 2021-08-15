@@ -73,17 +73,18 @@ HINT: Module Operator
 */
 
 const check3and7 = function (myNum) {
-    if (myNum > 0){ if (myNum%3===0 || myNum%7===0) {
-        console.log(`affermative`)
-    } else {
-        console.log(`negative`)
-    }
+    if (myNum > 0) {
+        if (myNum % 3 === 0 || myNum % 7 === 0) {
+            console.log(`affermative`)
+        } else {
+            console.log(`negative`)
+        }
 
     } else {
         console.log(`give me a positive number`)
     }
 }
- check3and7(18)
+check3and7(18)
 
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
@@ -102,17 +103,19 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 */
 
 function upperFirst (givenString) {
-   
-    let myArray = givenString.split(" ");
-  let newArray = []
   
-    for (let i = 0; i < myArray.length; i++){
- newArray.push(myArray[i][0].toUpperCase() + myArray[i].replace(myArray[i][0], ``))
-    
-    }
-  return newArray.join(" ")
- }
-   upperFirst("hey is this working?")
+    givenString = givenString.split(' ').filter(s => s).join(' ');//this is to remove all the extra whitespace from the givenstring in case there is some. Found here: https://stackoverflow.com/questions/7635952/javascript-how-to-remove-all-extra-spacing-between-words
+      
+        let myArray = givenString.split(" ");
+      let newArray = []
+      
+        for (let i = 0; i < myArray.length; i++){
+     newArray.push(myArray[i][0].toUpperCase() + myArray[i].replace(myArray[i][0], ``))
+        
+        }
+      return newArray.join(" ")
+     }
+       upperFirst("hey is this working?")
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.

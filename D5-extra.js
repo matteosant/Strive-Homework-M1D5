@@ -27,7 +27,7 @@ if (randomArray[i] > 5){
 }
 
     }
-  const sum = sumArray.reduce((result,number)=> result+number); //I took this line from here: https://reactgo.com/find-the-sum-of-numbers-in-array-javascript/
+  const sum = sumArray.reduce((result,number)=> result+number); //took this line from here: https://reactgo.com/find-the-sum-of-numbers-in-array-javascript/
   
    return sum
   
@@ -43,7 +43,7 @@ In your eCommerce you have an array of objects called shoppingCart. In this arra
 Create a function "shippingCartTotal" which calculates the total due to the shop.
 */
 
-/* WRITE YOUR CODE HERE */
+let shoppingCart = []
 
 /* EXERCISE 13
 In your eCommerce you have an array of objects called shoppingCart. In this array you have a number of objects with a price, a name, an id and the quantity to be shipped.
