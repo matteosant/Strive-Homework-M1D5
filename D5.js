@@ -84,6 +84,7 @@ const check3and7 = function (myNum) {
     }
 }
  check3and7(18)
+
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
@@ -100,19 +101,49 @@ reverseString('halleluja');
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
-function upperFirst()
+function upperFirst (givenString) {
+   
+    let myArray = givenString.split(" ");
+  let newArray = []
+  
+    for (let i = 0; i < myArray.length; i++){
+ newArray.push(myArray[i][0].toUpperCase() + myArray[i].replace(myArray[i][0], ``))
+    
+    }
+  return newArray.join(" ")
+ }
+   upperFirst("hey is this working?")
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
-function cutString()
+/* function cutString (myCutString) {
+    let myArray2 = myCutString.split(" ")
+    let newCutArray = []
+    for (let i = 0; i< myArray2.length; i++) {
+      newCutArray.push(myArray2[i].slice(1, myArray2[i].length-1));
+    }
+return newCutArray  //this one deletes the first and last character of each word, need to be adjusted with if statement to not included single workds
+    
+}
+cutString(`the am afer cutted string`)*/
+
+function cutString (myCutString) {
+    myCutString = myCutString.slice(1, myCutString.length-1);
+    
+     return myCutString
+      
+  }
+  cutString(`Cutted String`) //this one cut the first and last character of the whole string
+  
+
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR CODE HERE */
+
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
