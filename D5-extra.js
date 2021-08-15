@@ -3,7 +3,40 @@ Write a function "checkArray" which receives an array of random numbers (created
 The function returns the sum of the numbers bigger than 5.
 */
 
-/* WRITE YOUR CODE HERE */
+
+function giveMeRandom(n) {
+    let nArray = []
+    function random(number) {
+        return Math.floor(Math.random() * number);
+      } 
+      for (let i = 0; i < n; i++){
+    nArray.push(random(10))
+      }
+      
+    return nArray
+}
+function checkArray(randomArray){
+    let sumArray = []
+    for (let i = 0; i<randomArray.length; i++){
+if (randomArray[i] > 5){
+    console.log(`${randomArray[i]} is bigger than 5`)
+    sumArray.push(randomArray[i])
+  
+}  else {
+    console.log(`${randomArray[i]} is NOT bigger than 5`)
+}
+
+    }
+  const sum = sumArray.reduce((result,number)=> result+number); //I took this line from here: https://reactgo.com/find-the-sum-of-numbers-in-array-javascript/
+  
+   return sum
+  
+  
+}
+checkArray(giveMeRandom(15))
+
+
+
 
 /* EXERCISE 12
 In your eCommerce you have an array of objects called shoppingCart. In this array you have a number of objects with a price, a name, an id and the quantity to be shipped.
